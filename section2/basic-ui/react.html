@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage with React</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="root">
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script>
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            // document.write(`<h1>Your random number is: ${randomNumber}</h1>`);
+            const numberElement = React.createElement("h1", null, `Your random number is: ${randomNumber}`);
+            const resultElement = React.createElement("h2", null, randomNumber % 2 === 0 ? "The number is Even" : "The number is Odd");
+            const root = document.getElementById('root');
+            ReactDOM.render(numberElement, root);
+            ReactDOM.render(resultElement, root);
+        </script>
+    </div>
+</body>
+</html>

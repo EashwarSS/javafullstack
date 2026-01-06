@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage with JS</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="root">
+        <script>
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            // document.write(`<h1>Your random number is: ${randomNumber}</h1>`);
+            const numberElement = document.createElement('h1');
+            numberElement.textContent = `Your random number is: ${randomNumber}`;
+            const resultElement = document.createElement("h2");
+            if (randomNumber % 2 === 0) {
+                resultElement.textContent = "The number is Even";
+            } else {
+                resultElement.textContent = "The number is Odd";
+            }
+            const root = document.getElementById('root');
+            root.appendChild(numberElement);
+            root.appendChild(resultElement);
+        </script>
+    </div>
+</body>
+</html>
